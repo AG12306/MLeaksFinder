@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "MLeaksFinder"
-  s.version          = "1.0.1"
+  s.name             = "YPLeaksFinder"
+  s.version          = "0.0.1"
   s.summary          = "Find memory leaks in your iOS app at develop time."
 
 # This description is used to generate tags and improve search results.
@@ -17,14 +17,12 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-#  s.description      = <<-DESC
-#TODO: Add long description of the pod here.
-#                       DESC
+ s.description      = "支持iOS13以上"
 
   s.homepage         = "https://github.com/AG12306/MLeaksFinder"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Zeposhe" => "zeposhe@163.com" }
+  s.author           = { "AG" => "qinguang1@xiaomi.com" }
   s.source           = { :git => "https://github.com/AG12306/MLeaksFinder.git", :tag => s.version }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -38,8 +36,8 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'MLeaksFinder/MLeaksFinder.h', 'MLeaksFinder/NSObject+MemoryLeak.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'FBRetainCycleDetector'
-  s.pod_target_xcconfig = {
-    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/FBRetainCycleDetector',
-    }
+  s.dependency 'FBRetainCycleDetector'
+  # s.pod_target_xcconfig = {
+  #   'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/FBRetainCycleDetector',
+  #   }
 end
