@@ -68,6 +68,7 @@
 		B3C512C41CE3368B0032C2C8 /* UIApplication+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MemoryLeak.m"; sourceTree = "<group>"; };
 		C0EFB20F26706EAB000A5FA1 /* UIAlertController+Showable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Showable.h"; sourceTree = "<group>"; };
 		C0EFB21026706EAB000A5FA1 /* UIAlertController+Showable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Showable.m"; sourceTree = "<group>"; };
+		C0EFB2132670718F000A5FA1 /* MLeaksFinder.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MLeaksFinder.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 		B3ADE1631C1BD1D600AA4F63 = {
 			isa = PBXGroup;
 			children = (
+				C0EFB2132670718F000A5FA1 /* MLeaksFinder.podspec */,
 				B3ADE16E1C1BD1D600AA4F63 /* MLeaksFinder */,
 				B3ADE16D1C1BD1D600AA4F63 /* Products */,
 				F2E3CE8BD1BB1CB88838AF63 /* Pods */,

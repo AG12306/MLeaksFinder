@@ -36,18 +36,18 @@ static __weak UIAlertController *alertView;
         
     }];
     
-    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:additionalButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    
     NSLog(@"%@: %@", title, message);
-    
     [alertController addAction:okAction];
-    [alertController addAction:otherAction];
-        
+    
+    if (additionalButtonTitle) {
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:additionalButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alertController addAction:otherAction];
+    }
+    
     alertView = alertController;
     [alertView show];
-    
 }
 
 @end
