@@ -16,5 +16,6 @@
 
 + (BOOL)isAnyObjectLeakedAtPtrs:(NSSet *)ptrs;
 + (void)addLeakedObject:(id)object;
+- (void)alertView;
 
 @end

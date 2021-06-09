@@ -18,12 +18,12 @@ static __weak UIAlertController *alertView;
 @implementation MLeaksMessenger
 
 + (void)alertWithTitle:(NSString *)title message:(NSString *)message {
-    [self alertWithTitle:title message:message delegate:nil additionalButtonTitle:nil];
+    [self alertWithTitle:title message:message block:nil additionalButtonTitle:nil];
 }
 
 + (void)alertWithTitle:(NSString *)title
                message:(NSString *)message
-              delegate:(id<UIAlertViewDelegate>)delegate
+                 block:(void(^)(void))returnBlock
  additionalButtonTitle:(NSString *)additionalButtonTitle {
 
     [alertView dismissViewControllerAnimated:YES completion:^{
@@ -41,7 +41,7 @@ static __weak UIAlertController *alertView;
     
     if (additionalButtonTitle) {
         UIAlertAction *otherAction = [UIAlertAction actionWithTitle:additionalButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
+            returnBlock();
         }];
         [alertController addAction:otherAction];
     }
