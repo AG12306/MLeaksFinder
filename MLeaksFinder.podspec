@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   s.public_header_files = 'MLeaksFinder/MLeaksFinder.h', 'MLeaksFinder/NSObject+MemoryLeak.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'FBRetainCycleDetector'
-  s.pod_target_xcconfig = { 
-    "FRAMEWORK_SEARCH_PATHS" => "\"${PODS_CONFIGURATION_BUILD_DIR}/FBRetainCycleDetector\""
+  s.pod_target_xcconfig = {
+    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/FBRetainCycleDetector',
     }
 end
