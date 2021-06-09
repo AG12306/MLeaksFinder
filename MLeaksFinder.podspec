@@ -17,7 +17,9 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
- s.description      = "支持iOS13以上"
+ s.description      = <<-DESC 
+                          YPLeaksFinder 是一个用于坚持泄漏的工具，修复了部分问题
+                      DESC
 
   s.homepage         = "https://github.com/AG12306/MLeaksFinder"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
