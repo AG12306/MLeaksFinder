@@ -11,8 +11,9 @@
  */
 
 #import "MLeaksMessenger.h"
+#import "UIAlertController+Showable.h"
 
-static __weak UIAlertView *alertView;
+static __weak UIAlertController *alertView;
 
 @implementation MLeaksMessenger
 
@@ -24,16 +25,29 @@ static __weak UIAlertView *alertView;
                message:(NSString *)message
               delegate:(id<UIAlertViewDelegate>)delegate
  additionalButtonTitle:(NSString *)additionalButtonTitle {
-    [alertView dismissWithClickedButtonIndex:0 animated:NO];
-    UIAlertView *alertViewTemp = [[UIAlertView alloc] initWithTitle:title
-                                                            message:message
-                                                           delegate:delegate
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:additionalButtonTitle, nil];
-    [alertViewTemp show];
-    alertView = alertViewTemp;
+
+    [alertView dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:additionalButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
     
     NSLog(@"%@: %@", title, message);
+    
+    [alertController addAction:okAction];
+    [alertController addAction:otherAction];
+        
+    alertView = alertController;
+    [alertView show];
+    
 }
 
 @end
